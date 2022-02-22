@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
+
+/* CSS Reset */
+* {
+    font-family: 'Work Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Utility Classes */
+.button{
+    width: 10em;
+    padding: 1.2em 0;
+    border: none;
+    border-radius: 50em;
+    background-color: #b01c2e;
+    font-weight: bold;
+    font-size: .7rem;
+    color: white;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: #79111d;
+}
+
+p {
+    line-height: 1.4rem;
+    padding-bottom: .2em;
+}
+
+h2, h3 {
+    padding-bottom: .5rem;
+}
+
+section {
+    margin: 2em 0;
+}
+
+.container {
+    text-align: center;
+    padding: 1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Hero Styling */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../img/dashboard.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: .5em 2em 3.5em;
+    color: white;
+}
+.hero img {
+    width: 100px;
+    height: 100px;
+}
+
+.hero header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5em;
+}
+
+.hero nav .nav-list {
+    display: none;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: .5em;
+}
+
+.hero h1 span {
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 span:before {
+    content: ' ';
+    position: absolute;
+    width: 3em;
+    background: #b01c2e;
+    height: 1em;
+    bottom: 0;
+    z-index: -1;
+}
+
+.hero p {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Pricing section styling */
+#pricing {
+    margin-bottom: -2em;
+}
+#pricing .pricing-description h2 {
+    text-transform: uppercase;
+}
+
+#pricing .pricing-description p {
+    padding-bottom: .5rem;
+}
+
+#pricing img {
+    width: 100%;
+}
+
+/* Inquiries styling */
+#inquiries .benefits {
+    padding-bottom: 2em;
+}
+
+#inquiries .inquiry-form {
+    padding: 1em;
+    /* margin: 0 -1em; */
+    background-color: #f5f5f5;
+}
+
+#inquiries .inquiry-form label {
+    display: block;
+    text-align: left;
+}
+
+#inquiries .inquiry-form select, input, textarea {
+    width: 100%;
+    padding: 1em .5em;
+    margin: .5em 0;
+    border: 1px solid #d5d5d5;
+    border-radius: .5em;
+}
+
+/* Footer Styling */
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 .2em;
+    background-color: #b01c2e;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-items: center;
+}
+
+footer ul li {
+    margin: .5em .5em;
+}
+footer p {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+footer a {
+    color: white;
+}
+
+@media (min-width: 930px) {
+    /* Hero media queries */
+    .hero {
+        height: 80vh;
+    }
+    .hero nav .nav-list {
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+    }
+
+    .hero nav .nav-list li {
+        margin: 0 1em;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .hero nav .nav-list li a {
+        color: white;
+    }
+
+    .hero nav .nav-list li a:hover {
+        color: #b01c2e;
+    }
+
+    .hero p {
+        line-height: 1.7em;
+    }
+
+    /* pricing */
+    #pricing {
+        display: grid;
+        margin-top: 0;
+        margin-bottom: 0;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    #pricing .pricing-description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* inquiries */
+    #inquiries {
+        background-color: #f5f5f5;
+        margin: 0;
+        padding: 2em 1em;
+    }
+    #inquiries .inquiry-form{
+        width: 40%;
+        margin: 1em auto;
+    }
+
+    #inquiries .inquiry-form h3, p {
+        text-align: center;
+    }
+
+    #inquiries .inquiry-form input[type=button] {
+        display: block;
+        margin-left: 40%;
+    }
+
+    footer {
+        padding: 1em .5em;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    footer ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    footer p {
+        margin-top: .5em;
+    }
+}
