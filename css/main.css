@@ -233,7 +233,7 @@ footer a {
     }
 
     footer {
-        padding: 1em .5em;
+        padding: 2.5em .5em;
         grid-template-columns: repeat(2, 50%);
     }
 
